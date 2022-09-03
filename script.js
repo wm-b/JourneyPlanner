@@ -32,11 +32,15 @@ function sleep(milliseconds) {
 
 // moves the current view off-screen to right flashes the other views past before returning to view 1
 async function reset() {
-	document.getElementById("view4").setAttribute("class", "rightOut");
+	document.getElementById("view3").setAttribute("class", "rightOut");
 	await sleep(150);
-	document.getElementById("view4").style.display = "none";
+	document.getElementById("view3").style.display = "none";
+
+    document.getElementById('postcode1').value = "";
+    document.getElementById('postcode2').value = "";
+    document.getElementById('postcode3').value = "";
 	
-	for (i = 5; i > 1; i--) {
+	for (i = 3; i > 1; i--) {
         document.getElementById("view" + i).style.display = "block";
         document.getElementById("view" + i).setAttribute("class", "reset");
         
@@ -104,7 +108,7 @@ function buildURL() {
     url += document.getElementById('travelMode').value;
 
     url += "&TrafficModel=best_guess"
-
+    
     return url;
 }
 
