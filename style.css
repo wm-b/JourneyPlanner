@@ -1,0 +1,329 @@
+html, body {
+	overflow: hidden;
+}
+
+body {
+    margin: 0vw;
+    background: url(images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+a {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: Arial;
+	font-size: 1.5vw;
+	padding-left: 0.15vw;
+	padding-right: 0.15vw;
+}
+
+input {
+	padding: 0.75vw;
+	margin: 1vw 0;
+	border: 0;
+	border-radius: 1vw;
+	font-size: 1.25vw;
+	display: block;
+	margin: auto;
+}
+
+select {
+	padding: 0.75vw;
+	margin:1vw 0;
+	border: 0;
+	border-radius: 1vw;
+	font-size: 1.25vw;
+	padding-left: 5.3vw;
+	padding-right: 5.3vw;
+	display: block;
+	margin: auto;
+}
+
+.submit {
+	font-size: 1.5vw;
+	padding-left: 6.1vw;
+	padding-right: 6.1vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	transition: 0.3s;
+}
+
+.submit:hover {
+	background-color: rgb(150, 235, 255);
+	transition: 0.3s;
+}
+
+.submitError {
+	font-size: 1.5vw;
+	padding-left: 6.1vw;
+	padding-right: 6.1vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	transition: 0.3s;
+	background-color: rgb(255, 150, 150);
+	animation-name: shake;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.error {
+	display: block;
+	color: red;
+	text-shadow: 0vw 0vw #000000;
+	text-align: center;
+	font-family: arial;
+	font-size: 1vw;
+	margin: 0vw;
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+}
+
+.verticalalign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    background: linear-gradient(90deg, rgba(200,200,200,0) 0%, rgba(125,125,125,0.5) 18%, rgba(50,50,50,0.8) 20%, 
+    rgba(50,50,50,0.8) 80%, rgba(125,125,125,0.5) 82%, rgba(200,200,200,0) 100%);
+}
+
+.middle {
+	height: 100%;
+	width: 60%;
+	margin: auto;
+    padding: 1vw;
+	text-align: justify;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.content {
+	margin: 0;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+    border-style: solid;
+    border-width: 0.3vw;
+    border-color: rgba(150, 150, 150, 1);
+	border-radius: 0.4vw;
+	background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.3vw;
+}
+
+.title {
+    display: block;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: bold;
+	font-family: arial;
+    padding-top: 0.7vw;
+    margin: 0vw;
+    text-shadow: 0.15vw 0.15vw rgba(0, 0, 0, 0.3);
+}
+
+.title2 {
+    display: block;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+	font-family: arial;
+    margin: 0vw;
+    color: rgb(35, 35, 35);
+    text-shadow: 0.15vw 0.15vw rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    font-size: 1.4vw;
+    font-weight: bold;
+	font-family: arial;
+    margin: 0vw;
+}
+
+.startButton {
+	width: 40vw;
+}
+
+.startButton:hover {
+	content:url(images/startjourneyhover.png);
+	background: url(images/startjourney.png);
+	background-size: 40vw;
+	background-repeat: no-repeat;
+}
+
+@keyframes shake {
+    3%, 12%, 21%, 30%, 39%, 48%, 57%, 65%, 74%, 83%, 92% { transform: translateX(0.2vw) }
+    6%, 15%, 24%, 33%, 42%, 51%, 60%, 68%, 77%, 86%, 95% { transform: translateX(0.1vw) }
+    9%, 18%, 27%, 36%, 45%, 54%, 63%, 71%, 80%, 89%, 98% { transform: translateX(-0.2vw) }
+}
+
+@keyframes leftOut {
+	0% {position:relative; left:0%}
+	100% {position:relative; left:-100%}
+}
+
+.leftOut {
+	animation-name: leftOut;
+	animation-duration: 0.52s;
+}
+
+@keyframes rightIn {
+	0% {position:relative; left:100%}
+	100% {position:relative; left:0%}
+}
+
+.rightIn {
+	animation-name: rightIn;
+	animation-duration: 0.52s;
+}
+
+@keyframes rightOut {
+	0% {position:relative; left:0%}
+	100% {position:relative; left:100%}
+}
+
+.rightOut {
+	animation-name: rightOut;
+	animation-duration: 0.52s;
+}
+
+@keyframes leftIn {
+	0% {position:relative; left:-100%}
+	100% {position:relative; left:0%}
+}
+
+.leftIn {
+	animation-name: leftIn;
+	animation-duration: 0.52s;
+}
+
+.reset {
+	animation-name: reset;
+	animation-duration: 0.21s;
+}
+
+@keyframes reset {
+	0% {position:relative; left:-100%}
+	100% {position:relative; left:100%}
+}
+
+@media (max-aspect-ratio: 9/10) {
+
+	input {
+		font-size: 5vw;
+		border-radius: 2vw;
+		padding: 2vw;
+	}
+
+	select {
+		font-size: 5vw;
+		padding: 2vw;
+		padding-left: 21.3vw;
+		padding-right: 21.3vw;
+		border-radius: 2vw;
+	}
+
+	a {
+		font-size: 4vw;
+		padding-left: 0.15vw;
+		padding-right: 0.15vw;
+	}
+
+	.background {
+		background: linear-gradient(90deg, rgba(200,200,200,0) 0%, rgba(125,125,125,0.5) 3%, rgba(50,50,50,0.8) 5%, 
+		rgba(50,50,50,0.8) 95%, rgba(125,125,125,0.5) 97%, rgba(200,200,200,0) 100%);
+	}
+
+	.startButton {
+		width: 75vw;
+	}
+
+	.startButton:hover {
+		background-size: 75vw;
+	}
+
+	.error {
+		font-size: 4vw;
+	}
+
+	.submit {
+		font-size: 5vw;
+		padding: 2vw;
+		padding-left: 24.6vw;
+		padding-right: 24.6vw;
+		border-radius: 2vw;
+	}
+
+	.submitError {
+		font-size: 5vw;
+		padding: 2vw;
+		padding-left: 24.6vw;
+		padding-right: 24.6vw;
+		border-radius: 2vw;
+	}
+
+	.title {
+		font-size: 12vw;
+		padding: 1vw;
+	}
+
+	.title2 {
+		font-size: 7vw;
+		padding: 1vw;
+	}
+
+	.subtitle {
+		font-size: 4vw;
+		padding: 2vw;
+	}
+
+	.middle {
+		height: 100%;
+		width: 90%;
+		margin: auto;
+		padding: 10px;
+		text-align: justify;
+		background-color: rgba(255, 255, 255, 0.75);
+	}
+
+	.content {
+		border-width: 1vw;
+	}
+
+	.paddingPage1 {
+		padding-top: 7vh;
+	}
+
+	.padding {
+		padding-top: 10vh;
+	}
+
+	.centerNextButton {
+		width: 256px;
+		height: 256px;
+		background-size: 256px;
+		left: 50%;
+		top: 80%;
+		margin-top: 140px;
+		padding-bottom: 0px;
+	}
+	.centerNextButton:hover {
+		background-size: 256px;
+	}
+}

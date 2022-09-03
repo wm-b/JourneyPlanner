@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<title>Journey Planner</title>
+	</head>
+
+	<body>
+		<div id="view1">
+            <div class="background">
+                <div class="middle">
+                    <div class="content">
+                        <a class="title">Journey Planner</a>
+                        <br>
+                        <a class="title2">Click below to begin</a>
+                        <br>
+                        <br>
+                        <img class="startButton" onclick="nextView(1)" src="images/startjourney.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<div id="view2" style="display:none;">
+            <div class="background">
+                <div class="middle">
+                    <div class="content">
+                        <a class="title">Journey Information</a>
+                        <br>
+                        <a class="subtitle">Enter the postcodes of at least two stops and your mode of transport</a>
+                        <br>
+                        <input placeholder="Postcode 1" id="postcode1">
+                        <br>
+                        <input placeholder="Postcode 2" id="postcode2">
+                        <br>
+                        <input placeholder="Postcode 3" id="postcode3">
+                        <br>
+                        <select name="Mode of Transport" id="travelMode">
+                            <option value="Bicycling">Bicycling</option>
+                            <option value="Driving">Driving</option>
+                            <option value="Walking">Walking</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Submit" class="submit" id="submit" onclick="submit()">
+                        <br>
+                        <a class="error" id="error"></a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+		<div id="view3" style="display:none;">
+            <div class="background">
+                <div class="middle">
+                    <div class="content">
+                        <a class="title">Journey Information</a>
+                        <br>
+                        <br>
+                        <div class="center">
+                        <div id="journey1">
+                            <a id=>Your journey from </a>
+                            <a id="displayPostcode1">null</a>
+                            <a>to</a>
+                            <a id="displayPostcode2">null</a>
+                            <a>will take</a>
+                            <a id="minutesData1" style="font-weight: bold">-1</a>
+                            <a style="font-weight: bold">minutes</a>
+                            <a>and spans</a>
+                            <a id="milesData1" style="font-weight: bold">-1</a>
+                            <a style="font-weight: bold">miles</a>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="journey2">
+                            <a id=>Your journey from </a>
+                            <a id="displayPostcode3">null</a>
+                            <a>to</a>
+                            <a id="displayPostcode4">null</a>
+                            <a>will take</a>
+                            <a id="minutesData2" style="font-weight: bold">-1</a>
+                            <a style="font-weight: bold">minutes</a>
+                            <a>and spans</a>
+                            <a id="milesData2" style="font-weight: bold">-1</a>
+                            <a style="font-weight: bold">miles</a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                </div>
+            </div>
+		</div>
+    </body>
+</html>
+
+<script src="jquery-3.6.1.min.js" type="text/javascript"></script>
+<script src="script.js"></script>
